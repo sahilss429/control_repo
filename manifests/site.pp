@@ -7,6 +7,9 @@ node 'master.puppet.vm' {
      content => $fqdn,
   }
 }
+node 'minetest.puppet.vm' {
+  include role::minecraft.server
+}
 node /^web/ {
   include role::app_server
 }
